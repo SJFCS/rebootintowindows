@@ -2,8 +2,8 @@
   "name": "RebootIntoWindows",
   "description": "Reboot system into Windows\n\nIt is a fork of RebootToUEFI.",
   "license": "GPLv3",
-  "uuid": "rebootintowindows@nimz.cool",
-  "url": "https://github.com/jusnim/rebootintowindows",
+  "uuid": "song.jinfeng@outlook.com",
+  "url": "https://github.com/SJFCS/rebootintowindows",
   "shell-version": ["45", "46", "47", "48"],
   "gettext-domain": "rebootintowindows@nimz.cool"
 }

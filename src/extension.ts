@@ -150,6 +150,9 @@ export default class RebootToWindowsExtension extends Extension {
   private async reboot(){
     let windows_grub_entry = this.get_windows_grub_entry(GRUB_CONFIG_PATH)
     const [, argv] = GLib.shell_parse_argv(`pkexec grub-reboot "${windows_grub_entry}"`)
+    if (!argv) {
+      throw new Error('Failed to parse command arguments');
+    }
     const proc = Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE)
     await proc.wait_check_async(null);
     this.proxy?.RebootRemote(true);    
